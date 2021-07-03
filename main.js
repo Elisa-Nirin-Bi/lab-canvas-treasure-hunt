@@ -28,16 +28,16 @@ class Character {
     this.row = row;
   }
   moveUp() {
-    this.row -= 1;
+    this.row --;
   }
   moveRight() {
-    this.col += 1;
+    this.col ++;
   }
   moveDown() {
-    this.row += 1;
+    this.row ++;
   }
   moveLeft() {
-    this.col -= 1;
+    this.col --;
   }
 }
 
@@ -88,14 +88,12 @@ treasureImg.addEventListener('load', () => {
      
 })}
 
-console.log(precious.col)
-document.onkeydown = pressKey;
-function pressKey(event) {
+document.onkeydown = movePlayer;
+function movePlayer(event) {
   event = event || window.event;
   if (event.keyCode == '38') {
     player.moveUp();
   } else if (event.keyCode == '40') {
-    console.log('down');
     player.moveDown();
   } else if (event.keyCode == '37') {
     player.moveLeft();
