@@ -104,6 +104,7 @@ function movePlayer(event) {
 }
 
 function drawEverything() {
+  context.clearRect(0,0,width, height)
   drawGrid();
   drawPlayer();
  drawTreasure();
